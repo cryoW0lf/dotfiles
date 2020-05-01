@@ -9,8 +9,9 @@ echo "Installing graphic drivers"
 sudo pacman -S xf86-video-intel intel-media-driver nvidia nvidia-settings nvidia-prime
 
 echo "Installing xorg and lightdm"
-sudo pacman -S xorg-server xorg-apps xdg-user-dirs lightdm lightdm-webkit2-greeter
+sudo pacman -S xorg-server xorg-apps xdg-user-dirs lightdm lightdm-webkit2-greeter acpid
 yay -S libinput-gestures
+sudo systemctl enable acpid
 libinput-gestures-setup autostart
 
 echo "Installing bswpm and sxhkd"
