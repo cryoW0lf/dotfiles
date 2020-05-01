@@ -12,7 +12,10 @@ echo "Installing xorg and lightdm"
 sudo pacman -S xorg-server xorg-apps xdg-user-dirs lightdm lightdm-webkit2-greeter
 
 echo "Installing bswpm and sxhkd"
-sudo pacman -S bswpm sxhkd
+sudo pacman -S bspwm sxhkd
+
+echo "Installing audio"
+sudo pacman -S alsa alsa-utils pulseaudio pulseaudio-alsa pulseaudio-bluetooth pavucontrol #lib32-libpulse lib32-alsa-plugins
 
 echo "Installing applications"
 sudo pacman -S firefox alacritty stow
