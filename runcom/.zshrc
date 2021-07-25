@@ -26,5 +26,8 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-plugins=(git dotenv gradle)
+plugins=(git dotenv gradle stack)
 source $ZSH/oh-my-zsh.sh
+export PATH=~/.local/bin:$PATH
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
+
